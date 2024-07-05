@@ -9,8 +9,6 @@ class Search:
 
         search_term_formatted = search_term.replace(" ", "+")
         fields = ["title", "author_name"]
-        # formats the list into a comma separated string
-        # output: "title,author_name"
         fields_formatted = ",".join(fields)
         limit = 1
 
@@ -45,13 +43,8 @@ class Search:
         return response_formatted
 
 
-# results = Search().get_search_results()
-# print(results)
-
-# results_json = Search().get_search_results_json()
-# print(json.dumps(results_json, indent=1))
-
 search_term = input("Enter a book title: ")
 result = Search().get_user_search_results(search_term)
 print("Search Result:\n")
 print(result)
+
